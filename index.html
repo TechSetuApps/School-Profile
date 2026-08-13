@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#EDE7D6">
+<meta name="description" content="+2 High School Pindaruch — a higher secondary school in Darbhanga, Bihar, where every student is guided toward the stream they're actually good at: Science, Commerce, Arts or Sports.">
+<title>+2 High School Pindaruch — Darbhanga, Bihar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE7D6;
+    --paper-deep:#E3DCC7;
+    --paper-soft:#F4EFE0;
+    --ink:#1C2541;
+    --ink-soft:#4A5170;
+    --ink-mute:#6E7390;
+    --maroon:#6B1F2A;
+    --maroon-deep:#511620;
+    --gold:#AD8330;
+    --gold-soft:#C9A35A;
+    --sage:#5C6B4F;
+    --line: rgba(28,37,65,0.14);
+    --line-strong: rgba(28,37,65,0.22);
+    --radius: 3px;
+    --shadow-sm: 0 1px 2px rgba(28,37,65,0.04), 0 2px 8px rgba(28,37,65,0.04);
+    --shadow-md: 0 4px 12px rgba(28,37,65,0.06), 0 12px 32px rgba(28,37,65,0.06);
+    --ease: cubic-bezier(.2,.7,.3,1);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+
+  h1,h2,h3,h4{font-family:'Fraunces', Georgia, serif; font-weight:600; letter-spacing:-0.015em; line-height:1.15;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 48px;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:24px;height:1px;
+    background:var(--maroon);
+    display:inline-block;
+  }
+
+  /* ============ NAV ============ */
+  header.site{
+    position:sticky; top:0; z-index:100;
+    background:rgba(237,231,214,0.88);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:1180px; margin:0 auto; padding:16px 48px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:12px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:17px;
+    color:var(--ink);
+    flex-shrink:0;
+  }
+  .brandmark .crest{
+    width:38px; height:38px;
+    border:1.5px solid var(--maroon);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-weight:700; font-size:13px;
+    color:var(--maroon);
+    transform: rotate(45deg);
+    flex-shrink:0;
+    background:var(--paper-soft);
+    transition: transform .4s var(--ease), background .3s var(--ease);
+  }
+  .brandmark .crest span{transform: rotate(-45deg); display:block;}
+  .brandmark:hover .crest{transform: rotate(135deg); background:var(--maroon); color:var(--paper);}
+  .brandmark:hover .crest span{color:var(--paper);}
+  .brand-text{display:flex; flex-direction:column; line-height:1.15;}
+  .brand-text small{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink-mute); font-weight:400;
+    margin-top:2px;
+  }
+  nav ul{list-style:none; display:flex; gap:30px; align-items:center;}
+  nav a.nav-link{
+    text-decoration:none; color:var(--ink-soft); font-size:14px; font-weight:500;
+    position:relative; padding:6px 0;
+    transition: color .2s var(--ease);
+  }
+  nav a.nav-link::after{
+    content:'';
+    position:absolute; left:0; bottom:0;
+    width:0; height:1px; background:var(--maroon);
+    transition: width .3s var(--ease);
+  }
+  nav a.nav-link:hover{color:var(--maroon);}
+  nav a.nav-link:hover::after{width:100%;}
+
+  .nav-cta{
+    padding:9px 18px;
+    background:var(--ink); color:var(--paper);
+    font-size:13px; font-weight:500;
+    border:1px solid var(--ink);
+    transition: background .25s var(--ease), border-color .25s var(--ease);
+    border-radius:var(--radius);
+  }
+  .nav-cta:hover{background:var(--maroon); border-color:var(--maroon);}
+
+  .nav-toggle{
+    display:none;
+    flex-direction:column; gap:5px;
+    width:28px; padding:6px 2px;
+    background:none; border:none;
+  }
+  .nav-toggle span{
+    display:block; width:100%; height:1.5px; background:var(--ink);
+    transition: transform .3s var(--ease), opacity .25s var(--ease);
+  }
+  .nav-toggle.open span:nth-child(1){transform: translateY(6.5px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform: translateY(-6.5px) rotate(-45deg);}
+
+  /* Mobile nav overlay */
+  .mobile-menu{
+    position:fixed; inset:0;
+    background:var(--paper);
+    z-index:99;
+    padding:80px 24px 40px;
+    transform: translateY(-100%);
+    transition: transform .4s var(--ease);
+    overflow-y:auto;
+    display:flex; flex-direction:column;
+  }
+  .mobile-menu.open{transform: translateY(0);}
+  .mobile-menu a{
+    display:block;
+    padding:18px 0;
+    font-family:'Fraunces', serif;
+    font-size:26px;
+    font-weight:500;
+    color:var(--ink);
+    border-bottom:1px solid var(--line);
+    transition: color .2s, padding-left .3s var(--ease);
+  }
+  .mobile-menu a:hover{color:var(--maroon); padding-left:8px;}
+  .mobile-menu .mobile-cta{
+    margin-top:32px;
+    padding:16px; text-align:center;
+    background:var(--ink); color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:15px; font-weight:500;
+    border-radius:var(--radius);
+  }
+  .mobile-menu .mobile-addr{
+    margin-top:auto; padding-top:32px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; color:var(--ink-mute);
+    line-height:1.7;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    padding:72px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.08fr 0.92fr; gap:64px; align-items:center;
+    padding-bottom:80px;
+  }
+  .hero .eyebrow{margin-bottom:28px;}
+  .hero h1{
+    font-size:clamp(34px, 5.4vw, 62px);
+    line-height:1.05;
+    color:var(--ink);
+    letter-spacing:-0.02em;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--maroon); font-weight:500;
+    position:relative;
+  }
+  .hero h1 em::after{
+    content:'';
+    position:absolute; left:0; right:0; bottom:2px;
+    height:8px; background:rgba(173,131,48,0.22);
+    z-index:-1;
+    transform: skewX(-6deg);
+  }
+  .hero .lede{
+    margin-top:24px;
+    max-width:540px;
+    font-size:17px;
+    color:var(--ink-soft);
+    line-height:1.65;
+  }
+  .hero-cta-row{
+    margin-top:34px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn-primary{
+    padding:13px 26px;
+    background:var(--maroon); color:var(--paper);
+    font-size:14px; font-weight:500;
+    border:1px solid var(--maroon);
+    border-radius:var(--radius);
+    transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary:hover{background:var(--maroon-deep); transform: translateY(-2px); box-shadow:var(--shadow-md);}
+  .btn-primary svg{width:14px; height:14px; transition: transform .25s var(--ease);}
+  .btn-primary:hover svg{transform: translateX(3px);}
+  .btn-ghost{
+    padding:13px 22px;
+    background:transparent; color:var(--ink);
+    font-size:14px; font-weight:500;
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    transition: border-color .25s var(--ease), background .25s var(--ease);
+  }
+  .btn-ghost:hover{border-color:var(--ink); background:var(--ink); color:var(--paper);}
+
+  .hero .address-line{
+    margin-top:36px;
+    display:flex; gap:14px 28px; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .hero .address-line .chip{
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .hero .address-line .chip::before{
+    content:''; width:5px; height:5px; background:var(--gold); border-radius:50%;
+  }
+  .hero .address-line b{color:var(--ink); font-weight:500;}
+
+  .hero-media{
+    position:relative;
+    border:1px solid var(--line-strong);
+    aspect-ratio: 4 / 5;
+    overflow:hidden;
+    background:var(--paper-deep);
+    box-shadow: var(--shadow-md);
+  }
+  .hero-media img{
+    width:100%; height:100%; object-fit:cover; object-position:center 35%;
+    transition: transform 1.2s var(--ease);
+  }
+  .hero-media:hover img{transform: scale(1.04);}
+  .hero-media .frame-tag{
+    position:absolute; left:0; bottom:0;
+    background:var(--ink); color:var(--paper);
+    padding:10px 18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .hero-media::before{
+    content:'';
+    position:absolute; inset:14px;
+    border:1px solid rgba(237,231,214,0.55);
+    pointer-events:none; z-index:2;
+  }
+  .hero-media .corner-mark{
+    position:absolute; top:14px; right:14px;
+    z-index:3;
+    background:rgba(237,231,214,0.95);
+    padding:6px 12px;
+    font-family:'Fraunces', serif;
+    font-size:11px; font-weight:600; color:var(--maroon);
+    letter-spacing:0.06em;
+  }
+
+  /* Marquee strip */
+  .marquee{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--paper-deep);
+    overflow:hidden;
+    padding:14px 0;
+  }
+  .marquee-track{
+    display:flex; gap:48px;
+    animation: marquee 38s linear infinite;
+    width:max-content;
+  }
+  .marquee-item{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--ink-soft);
+    display:inline-flex; align-items:center; gap:14px;
+    white-space:nowrap;
+  }
+  .marquee-item::after{
+    content:'◆'; color:var(--gold); font-size:9px;
+  }
+  @keyframes marquee{
+    from{transform: translateX(0);}
+    to{transform: translateX(-50%);}
+  }
+
+  /* ============ SECTION generic ============ */
+  section{padding:96px 0; border-bottom:1px solid var(--line); position:relative;}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:56px; gap:40px; flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(28px, 3.6vw, 40px); max-width:620px;}
+  .section-head .head-meta{max-width:380px; color:var(--ink-soft); font-size:15px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+
+  /* ============ ABOUT ============ */
+  .about-grid{
+    display:grid; grid-template-columns: 1.05fr 1fr; gap:72px; align-items:start;
+  }
+  .about-text p{color:var(--ink-soft); margin-bottom:18px; font-size:15.5px; line-height:1.7;}
+  .about-text p:last-child{margin-bottom:0;}
+  .about-text p:first-child::first-letter{
+    font-family:'Fraunces', serif;
+    font-size:54px; font-weight:600;
+    color:var(--maroon);
+    float:left;
+    line-height:0.9;
+    margin:6px 10px 0 0;
+  }
+  .stat-block{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:var(--line-strong); border:1px solid var(--line-strong);
+    border-radius:var(--radius); overflow:hidden;
+  }
+  .stat{
+    background:var(--paper);
+    padding:32px 28px;
+    transition: background .25s var(--ease);
+  }
+  .stat:hover{background:var(--paper-soft);}
+  .stat .num{
+    font-family:'Fraunces', serif; font-size:38px; font-weight:600; color:var(--maroon);
+    line-height:1;
+  }
+  .stat .label{
+    font-size:12px; color:var(--ink-soft); margin-top:10px;
+    text-transform:uppercase; letter-spacing:0.08em;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* ============ HIGHLIGHTS ============ */
+  .highlight-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--line-strong); border:1px solid var(--line-strong);
+    border-radius:var(--radius); overflow:hidden;
+  }
+  .highlight-card{
+    background:var(--paper);
+    padding:36px 28px;
+    display:flex; flex-direction:column; gap:16px;
+    min-height:260px;
+    transition: background .35s var(--ease), color .35s var(--ease);
+    position:relative;
+  }
+  .highlight-card::before{
+    content:'';
+    position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--maroon);
+    transform: scaleY(0); transform-origin: top;
+    transition: transform .35s var(--ease);
+  }
+  .highlight-card:hover{
+    background:var(--ink);
+  }
+  .highlight-card:hover::before{transform: scaleY(1);}
+  .highlight-card:hover *{color:var(--paper) !important;}
+  .highlight-card:hover .hl-icon{border-color:var(--paper); color:var(--paper); background:transparent;}
+  .hl-icon{
+    width:44px; height:44px;
+    border:1.5px solid var(--maroon);
+    color:var(--maroon);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-size:17px; font-weight:600;
+    flex-shrink:0;
+    transition: all .3s var(--ease);
+  }
+  .highlight-card h4{font-size:19px; margin-top:2px; transition: color .3s var(--ease);}
+  .highlight-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.65; transition: color .3s var(--ease);}
+  .highlight-card .hl-tag{
+    margin-top:auto;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold);
+    transition: color .3s var(--ease);
+  }
+
+  /* ============ PATHWAY (signature element) ============ */
+  .pathway-intro{
+    max-width:680px; color:var(--ink-soft); font-size:15.5px;
+    margin-bottom:56px; line-height:1.7;
+  }
+  .pathway{
+    display:flex; align-items:stretch; gap:0;
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius); overflow:hidden;
+    background:var(--line-strong);
+    gap:1px;
+  }
+  .pw-origin{
+    flex:0 0 220px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:32px 28px;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .pw-origin .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    opacity:0.65;
+  }
+  .pw-origin h3{font-size:24px; margin-top:14px; color:var(--paper); font-weight:500;}
+  .pw-origin .sub{font-size:13px; margin-top:18px; opacity:0.78; line-height:1.6;}
+  .pw-origin .arrow{
+    margin-top:24px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.1em;
+    color:var(--gold-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+  .pw-origin .arrow::after{
+    content:'→'; font-size:14px;
+  }
+
+  .pw-streams{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line-strong);
+  }
+  .pw-stream{
+    background:var(--paper);
+    padding:28px 22px;
+    display:flex; flex-direction:column; gap:10px;
+    transition: background .25s var(--ease);
+    position:relative;
+  }
+  .pw-stream:hover{background:var(--paper-soft);}
+  .pw-stream .marker{
+    width:10px; height:10px; border-radius:50%;
+    margin-bottom:6px;
+  }
+  .pw-stream:nth-child(1) .marker{background:var(--maroon);}
+  .pw-stream:nth-child(2) .marker{background:var(--gold);}
+  .pw-stream:nth-child(3) .marker{background:var(--sage);}
+  .pw-stream:nth-child(4) .marker{background:var(--ink);}
+  .pw-stream .num{
+    font-family:'IBM Plex Mono', monospace; font-size:11px;
+    color:var(--maroon); letter-spacing:0.1em;
+  }
+  .pw-stream h4{font-family:'Fraunces', serif; font-size:19px; font-weight:600;}
+  .pw-stream p{font-size:13px; color:var(--ink-soft); line-height:1.6;}
+  .pw-stream .pw-subjects{
+    margin-top:auto; padding-top:14px;
+    border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; color:var(--ink-mute); line-height:1.6;
+    letter-spacing:0.04em;
+  }
+
+  .pathway-note{
+    margin-top:28px;
+    font-size:13.5px; color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace;
+    display:flex; align-items:center; gap:10px;
+    line-height:1.7;
+  }
+  .pathway-note::before{content:'—'; color:var(--maroon); flex-shrink:0;}
+
+  /* ============ TEACHERS ============ */
+  .teacher-list{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+    background:var(--line-strong); border:1px solid var(--line-strong);
+    border-radius:var(--radius); overflow:hidden;
+  }
+  .teacher-row{
+    background:var(--paper);
+    padding:32px 34px;
+    display:flex; gap:22px; align-items:flex-start;
+    transition: background .25s var(--ease);
+  }
+  .teacher-row:hover{background:var(--paper-soft);}
+  .teacher-row .idx{
+    font-family:'Fraunces', serif; font-size:15px; color:var(--maroon);
+    font-weight:600; flex-shrink:0; margin-top:2px;
+    border:1px solid var(--maroon);
+    width:32px; height:32px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%;
+  }
+  .teacher-row h4{font-size:18px; margin-bottom:5px;}
+  .teacher-row .role{
+    font-size:11.5px; color:var(--maroon); font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.06em; margin-bottom:12px; text-transform:uppercase;
+  }
+  .teacher-row p{font-size:14px; color:var(--ink-soft); line-height:1.65;}
+
+  /* ============ SPORTS ============ */
+  .sports-wrap{
+    display:grid; grid-template-columns:0.95fr 1.05fr; gap:72px;
+  }
+  .sports-copy p{color:var(--ink-soft); font-size:15.5px; margin-bottom:18px; line-height:1.7;}
+  .sports-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+  .sports-tags span{
+    border:1px solid var(--line-strong);
+    padding:8px 16px;
+    font-size:12px;
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink-soft);
+    border-radius:var(--radius);
+    transition: all .25s var(--ease);
+  }
+  .sports-tags span:hover{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .sports-list{border-top:1px solid var(--line-strong);}
+  .sports-item{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 4px; border-bottom:1px solid var(--line);
+    transition: padding-left .25s var(--ease), color .25s var(--ease);
+  }
+  .sports-item:hover{padding-left:14px;}
+  .sports-item:hover .name{color:var(--maroon);}
+  .sports-item .name{font-family:'Fraunces', serif; font-size:19px; font-weight:500; transition: color .25s var(--ease);}
+  .sports-item .meta{font-size:12px; font-family:'IBM Plex Mono', monospace; color:var(--ink-soft);}
+
+  /* ============ ACHIEVEMENTS ============ */
+  .ach-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  }
+  .ach-card{
+    background:var(--paper-soft);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    position:relative;
+    overflow:hidden;
+  }
+  .ach-card::after{
+    content:'';
+    position:absolute; top:0; right:0;
+    width:60px; height:60px;
+    background: radial-gradient(circle at top right, rgba(173,131,48,0.12), transparent 70%);
+    pointer-events:none;
+  }
+  .ach-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--line-strong);
+  }
+  .ach-card .ach-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; color:var(--maroon);
+    letter-spacing:0.1em;
+    margin-bottom:14px;
+  }
+  .ach-card h4{
+    font-size:19px; margin-bottom:10px;
+    line-height:1.3;
+  }
+  .ach-card p{font-size:14px; color:var(--ink-soft); line-height:1.65;}
+  .ach-card .ach-medal{
+    margin-top:18px;
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.08em;
+    color:var(--gold);
+    text-transform:uppercase;
+  }
+  .ach-card .ach-medal::before{
+    content:'◆'; font-size:9px;
+  }
+
+  /* ============ GALLERY ============ */
+  .gallery-grid{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:20px;
+  }
+  .gallery-item{
+    position:relative; overflow:hidden;
+    border:1px solid var(--line-strong);
+    background:var(--paper-deep);
+    border-radius:var(--radius);
+  }
+  .gallery-item img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition: transform .8s var(--ease);
+  }
+  .gallery-item:hover img{transform: scale(1.05);}
+  .gallery-item.tall{aspect-ratio: 4/5;}
+  .gallery-item.wide{aspect-ratio: 4/3;}
+  .gallery-caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:20px 22px;
+    background: linear-gradient(180deg, transparent, rgba(28,37,65,0.88) 60%);
+    color:var(--paper);
+    display:flex; justify-content:space-between; align-items:flex-end; gap:12px;
+  }
+  .gallery-caption .cap-title{font-family:'Fraunces', serif; font-size:17px; font-weight:500;}
+  .gallery-caption .cap-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.08em;
+    text-transform:uppercase; opacity:0.82; white-space:nowrap;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;
+  }
+  .contact-info h3{font-size:26px; margin-bottom:18px;}
+  .contact-info p{color:var(--ink-soft); font-size:15.5px; line-height:1.7; margin-bottom:28px;}
+  .contact-row{
+    display:flex; gap:18px; padding:18px 0;
+    border-bottom:1px solid var(--line);
+    align-items:flex-start;
+  }
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .ic{
+    width:38px; height:38px;
+    background:var(--paper-deep);
+    border:1px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    border-radius:var(--radius);
+    color:var(--maroon);
+  }
+  .contact-row .ic svg{width:16px; height:16px;}
+  .contact-row .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--ink-mute); margin-bottom:4px;
+  }
+  .contact-row .val{font-size:15px; color:var(--ink); font-weight:500; line-height:1.5;}
+  .contact-row .val a{color:var(--maroon); border-bottom:1px solid transparent; transition: border-color .2s;}
+  .contact-row .val a:hover{border-color:var(--maroon);}
+
+  .map-wrap{
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--paper-deep);
+    aspect-ratio: 4/3.2;
+    position:relative;
+  }
+  .map-wrap iframe{
+    width:100%; height:100%; border:0; display:block;
+    filter: grayscale(0.3) sepia(0.08);
+  }
+  .map-tag{
+    position:absolute; top:14px; left:14px;
+    background:var(--paper); color:var(--ink);
+    padding:8px 14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.06em;
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    z-index:2;
+    pointer-events:none;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:72px 0 32px;
+  }
+  footer .wrap{padding:0 48px;}
+  .foot-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px;
+    padding-bottom:48px;
+    border-bottom:1px solid rgba(237,231,214,0.18);
+  }
+  .foot-brand h3{font-size:28px; color:var(--paper); margin-bottom:12px;}
+  .foot-brand p{font-size:13.5px; opacity:0.7; line-height:1.7; max-width:340px;}
+  .foot-col h5{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:18px; font-weight:500;
+  }
+  .foot-col ul{list-style:none;}
+  .foot-col li{margin-bottom:10px;}
+  .foot-col a{
+    color:var(--paper); opacity:0.75; font-size:14px;
+    transition: opacity .2s, padding-left .25s var(--ease);
+    display:inline-block;
+  }
+  .foot-col a:hover{opacity:1; padding-left:6px; color:var(--gold-soft);}
+  .foot-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:24px; gap:18px; flex-wrap:wrap;
+  }
+  .foot-bottom .rights{
+    font-size:11.5px; opacity:0.6;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+  }
+  .foot-bottom .made{
+    font-size:11.5px; opacity:0.6;
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+  }
+
+  /* ============ Mobile sticky CTA ============ */
+  .mobile-cta-bar{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0;
+    background:var(--paper);
+    border-top:1px solid var(--line-strong);
+    padding:12px 16px;
+    z-index:90;
+    box-shadow: 0 -4px 16px rgba(28,37,65,0.08);
+    gap:10px;
+  }
+  .mobile-cta-bar a{
+    flex:1;
+    padding:14px;
+    text-align:center;
+    font-size:14px; font-weight:500;
+    border-radius:var(--radius);
+    transition: background .25s var(--ease);
+  }
+  .mobile-cta-bar .mc-ghost{
+    background:transparent; color:var(--ink);
+    border:1px solid var(--line-strong);
+  }
+  .mobile-cta-bar .mc-ghost:hover{background:var(--paper-deep);}
+  .mobile-cta-bar .mc-primary{
+    background:var(--maroon); color:var(--paper);
+  }
+  .mobile-cta-bar .mc-primary:hover{background:var(--maroon-deep);}
+
+  /* ============ Scroll reveal ============ */
+  .reveal{
+    opacity:0; transform: translateY(24px);
+    transition: opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  .reveal.in{opacity:1; transform: translateY(0);}
+  .reveal.d1{transition-delay:.08s;}
+  .reveal.d2{transition-delay:.16s;}
+  .reveal.d3{transition-delay:.24s;}
+  .reveal.d4{transition-delay:.32s;}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 1024px){
+    .wrap, nav{padding-left:32px; padding-right:32px;}
+    .hero-grid{gap:48px;}
+    .about-grid{gap:48px;}
+    .sports-wrap{gap:48px;}
+    .contact-wrap{gap:48px;}
+    .pw-origin{flex:0 0 180px; padding:26px 22px;}
+  }
+
+  @media (max-width: 900px){
+    .wrap, nav{padding-left:24px; padding-right:24px;}
+    section{padding:72px 0;}
+    .hero{padding-top:56px;}
+    .hero-grid{grid-template-columns:1fr; gap:40px; padding-bottom:56px;}
+    .hero-media{aspect-ratio:16/11; order:-1;}
+    .hero h1{font-size:clamp(32px, 7vw, 48px);}
+
+    .section-head{margin-bottom:40px;}
+    .section-head h2{font-size:28px;}
+
+    nav ul{display:none;}
+    .nav-toggle{display:flex;}
+    .nav-cta{display:none;}
+
+    .about-grid{grid-template-columns:1fr; gap:40px;}
+    .highlight-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .ach-grid{grid-template-columns:1fr 1fr;}
+
+    .pathway{flex-direction:column;}
+    .pw-origin{flex:1; padding:24px 22px;}
+    .pw-origin .arrow{display:none;}
+    .pw-streams{grid-template-columns:repeat(2,1fr);}
+
+    .teacher-list{grid-template-columns:1fr;}
+    .teacher-row{padding:26px 24px;}
+
+    .sports-wrap{grid-template-columns:1fr; gap:36px;}
+    .contact-wrap{grid-template-columns:1fr; gap:36px;}
+
+    .foot-grid{grid-template-columns:1fr; gap:32px;}
+    .foot-bottom{flex-direction:column; align-items:flex-start;}
+
+    .mobile-cta-bar{display:flex;}
+    body{padding-bottom:72px;}
+  }
+
+  @media (max-width: 560px){
+    .wrap, nav{padding-left:18px; padding-right:18px;}
+    section{padding:60px 0;}
+    .hero{padding-top:40px;}
+    .hero h1{font-size:30px;}
+    .hero .lede{font-size:15.5px;}
+    .hero-cta-row .btn-primary, .hero-cta-row .btn-ghost{flex:1; justify-content:center;}
+
+    .section-head{flex-direction:column; align-items:flex-start; gap:12px;}
+    .section-head h2{font-size:26px;}
+
+    .highlight-grid{grid-template-columns:1fr;}
+    .highlight-card{min-height:auto; padding:28px 22px;}
+    .gallery-grid{grid-template-columns:1fr;}
+    .gallery-item.tall, .gallery-item.wide{aspect-ratio:4/3;}
+    .ach-grid{grid-template-columns:1fr;}
+
+    .stat-block{grid-template-columns:1fr 1fr;}
+    .stat{padding:24px 20px;}
+    .stat .num{font-size:32px;}
+
+    .pw-streams{grid-template-columns:1fr;}
+    .pw-origin h3{font-size:22px;}
+
+    .sports-item .name{font-size:17px;}
+    .teacher-row{flex-direction:column; gap:14px;}
+
+    .map-wrap{aspect-ratio:4/3;}
+
+    .mobile-cta-bar{padding:10px 12px;}
+    .mobile-cta-bar a{font-size:13px; padding:12px;}
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{
+      animation-duration:0.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.01ms !important;
+      scroll-behavior:auto !important;
+    }
+    .reveal{opacity:1; transform:none;}
+    .marquee-track{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a href="#top" class="brandmark" aria-label="+2 High School Pindaruch home">
+      <div class="crest"><span>+2</span></div>
+      <div class="brand-text">
+        +2 High School Pindaruch
+        <small>Darbhanga · Bihar</small>
+      </div>
+    </a>
+    <ul>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#highlights" class="nav-link">Highlights</a></li>
+      <li><a href="#pathway" class="nav-link">Streams</a></li>
+      <li><a href="#teachers" class="nav-link">Teachers</a></li>
+      <li><a href="#sports" class="nav-link">Sports</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Contact</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#about">About</a>
+  <a href="#highlights">Highlights</a>
+  <a href="#pathway">Streams &amp; Guidance</a>
+  <a href="#teachers">Teachers</a>
+  <a href="#sports">Sports</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact" class="mobile-cta">Contact the school</a>
+  <div class="mobile-addr">
+    Pindaruch · Keoti<br>
+    Darbhanga · Bihar · India
+  </div>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Pindaruch · Keoti · Darbhanga, Bihar</div>
+      <h1>Every student,<br><em>guided</em> toward<br>what they're good at.</h1>
+      <p class="lede">+2 High School Pindaruch is a higher secondary school where academics, sport and vocation are treated as equally serious paths — and every student is placed on the one that actually fits them.</p>
+      <div class="hero-cta-row">
+        <a href="#pathway" class="btn-primary">
+          See how students are guided
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost">Visit campus</a>
+      </div>
+      <div class="address-line">
+        <div class="chip"><div><b>Village</b> — Pindaruch</div></div>
+        <div class="chip"><div><b>Block</b> — Keoti</div></div>
+        <div class="chip"><div><b>District</b> — Darbhanga</div></div>
+        <div class="chip"><div><b>State</b> — Bihar, India</div></div>
+      </div>
+    </div>
+    <div class="hero-media reveal d2">
+      <img src="images/school-building.jpg" alt="+2 High School Pindaruch main building and campus lawn" loading="eager">
+      <div class="corner-mark">EST. CAMPUS</div>
+      <div class="frame-tag">Main campus — Pindaruch</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Classes 6 to 12</span>
+    <span class="marquee-item">Four guided pathways</span>
+    <span class="marquee-item">Skill-first placement</span>
+    <span class="marquee-item">Daily sports coaching</span>
+    <span class="marquee-item">Village-scale campus</span>
+    <span class="marquee-item">Pindaruch · Darbhanga</span>
+    <span class="marquee-item">Classes 6 to 12</span>
+    <span class="marquee-item">Four guided pathways</span>
+    <span class="marquee-item">Skill-first placement</span>
+    <span class="marquee-item">Daily sports coaching</span>
+    <span class="marquee-item">Village-scale campus</span>
+    <span class="marquee-item">Pindaruch · Darbhanga</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">About the school</div>
+        <h2>A higher secondary school built around what each child is good at.</h2>
+      </div>
+      <p class="head-meta reveal d1">Serving Pindaruch and the surrounding villages of Darbhanga district, with classes from 6 to 12 and four guided pathways after Class 10.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>+2 High School Pindaruch takes students through Classes 6 to 12, with the higher secondary (+2) wing offering a choice of academic streams alongside a structured sports programme. The school's approach is simple: identify what a student is naturally strong at, and build their remaining school years around it.</p>
+        <p>Rather than pushing every student down the same road, teachers assess ability early — in the classroom, on the field, and through aptitude — and use that to guide each student toward the stream or path where they are most likely to succeed. A child strong in numbers moves toward Commerce; one strong in expression moves toward Arts; one strong on the field gets a real sports track, not just an occasional games period.</p>
+        <p>The campus sits at the heart of Pindaruch village, surrounded by open ground used for assembly, sport and outdoor learning. The atmosphere is calm, ordered and serious about learning — but never rigid.</p>
+      </div>
+      <div class="stat-block reveal d1">
+        <div class="stat"><div class="num">6–12</div><div class="label">Classes taught</div></div>
+        <div class="stat"><div class="num">04</div><div class="label">Guided pathways</div></div>
+        <div class="stat"><div class="num">1</div><div class="label">Campus, Pindaruch</div></div>
+        <div class="stat"><div class="num">100%</div><div class="label">Aptitude-guided placement</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">What makes us different</div>
+        <h2>The things families in Pindaruch actually notice about this school.</h2>
+      </div>
+      <p class="head-meta reveal d1">Not promises — the everyday things that shape how a child moves through these years.</p>
+    </div>
+    <div class="highlight-grid">
+      <div class="highlight-card reveal">
+        <div class="hl-icon">01</div>
+        <h4>Skill-first placement</h4>
+        <p>No student is pushed down a one-size-fits-all path — placement follows what each child is actually good at, assessed across academics, aptitude and physical ability.</p>
+        <div class="hl-tag">Core philosophy</div>
+      </div>
+      <div class="highlight-card reveal d1">
+        <div class="hl-icon">02</div>
+        <h4>Expert faculty</h4>
+        <p>Subject specialists across Science, Commerce and Arts, each trained to spot and guide student aptitude early — not only to teach the syllabus.</p>
+        <div class="hl-tag">Teaching staff</div>
+      </div>
+      <div class="highlight-card reveal d2">
+        <div class="hl-icon">03</div>
+        <h4>Sport as a real track</h4>
+        <p>Athletic ability is treated with the same seriousness as academics — daily coaching, faculty scouting and a real pathway, not an occasional activity period.</p>
+        <div class="hl-tag">Sports programme</div>
+      </div>
+      <div class="highlight-card reveal d3">
+        <div class="hl-icon">04</div>
+        <h4>Individual attention</h4>
+        <p>A village-scale campus means teachers know students by name — assessment is personal and ongoing, not a form filled once a year.</p>
+        <div class="hl-tag">Campus scale</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAY -->
+<section id="pathway">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">How students are guided</div>
+        <h2>After Class 10, every student is placed on the path that fits them.</h2>
+      </div>
+      <p class="head-meta reveal d1">The school's core philosophy — every child moves forward on the path suited to their skill, not the path the crowd is on.</p>
+    </div>
+    <p class="pathway-intro reveal">After Class 10, every student goes through an internal assessment covering academic performance, physical aptitude and classroom observation. Based on this, class teachers and the guidance panel recommend a stream — the student and family make the final choice. No student is left to figure it out alone.</p>
+
+    <div class="pathway reveal d1">
+      <div class="pw-origin">
+        <div class="tag">Starting point</div>
+        <div>
+          <h3>Class 10 pass-out</h3>
+          <div class="sub">Assessed on academics, aptitude &amp; physical ability before stream allocation.</div>
+        </div>
+        <div class="arrow">Four pathways</div>
+      </div>
+      <div class="pw-streams">
+        <div class="pw-stream">
+          <div class="marker"></div>
+          <div class="num">01 — Science</div>
+          <h4>Science Stream</h4>
+          <p>For students showing strength in analytical and lab-based work.</p>
+          <div class="pw-subjects">Physics · Chemistry<br>Biology · Mathematics</div>
+        </div>
+        <div class="pw-stream">
+          <div class="marker"></div>
+          <div class="num">02 — Commerce</div>
+          <h4>Commerce Stream</h4>
+          <p>For students with numerical and organisational strength.</p>
+          <div class="pw-subjects">Accountancy · Economics<br>Business Studies</div>
+        </div>
+        <div class="pw-stream">
+          <div class="marker"></div>
+          <div class="num">03 — Arts</div>
+          <h4>Arts Stream</h4>
+          <p>For students strong in expression, reasoning and civics.</p>
+          <div class="pw-subjects">History · Political Science<br>Hindi · English</div>
+        </div>
+        <div class="pw-stream">
+          <div class="marker"></div>
+          <div class="num">04 — Sports</div>
+          <h4>Sports Track</h4>
+          <p>Structured training alongside academics for standout athletes.</p>
+          <div class="pw-subjects">Daily practice<br>Faculty scouting</div>
+        </div>
+      </div>
+    </div>
+    <div class="pathway-note reveal d2">No student is left to figure out their stream alone — placement is a school-led, individual decision made with the family.</div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Our teachers</div>
+        <h2>Faculty responsible for both subject teaching and stream guidance.</h2>
+      </div>
+      <p class="head-meta reveal d1">Specialists by subject, but every teacher is also trained to spot aptitude and recommend the right path forward.</p>
+    </div>
+    <div class="teacher-list">
+      <div class="teacher-row reveal">
+        <div class="idx">01</div>
+        <div>
+          <h4>Science Faculty</h4>
+          <div class="role">Physics · Chemistry · Biology · Maths</div>
+          <p>Subject specialists who also run the lab-based aptitude assessments used for stream placement after Class 10.</p>
+        </div>
+      </div>
+      <div class="teacher-row reveal d1">
+        <div class="idx">02</div>
+        <div>
+          <h4>Commerce Faculty</h4>
+          <div class="role">Accountancy · Economics · Business Studies</div>
+          <p>Trained to identify numerical and analytical aptitude from Class 6 performance onward, long before stream selection.</p>
+        </div>
+      </div>
+      <div class="teacher-row reveal d2">
+        <div class="idx">03</div>
+        <div>
+          <h4>Arts &amp; Languages Faculty</h4>
+          <div class="role">History · Political Science · Hindi · English</div>
+          <p>Guide students strong in expression and reasoning toward the Arts stream and civic subjects, with attention to writing and argument.</p>
+        </div>
+      </div>
+      <div class="teacher-row reveal d3">
+        <div class="idx">04</div>
+        <div>
+          <h4>Physical Education Faculty</h4>
+          <div class="role">Sports Training &amp; Talent Identification</div>
+          <p>Run daily practice sessions and scout students with competitive potential for the structured sports track.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPORTS -->
+<section id="sports">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Sports at Pindaruch</div>
+        <h2>Treated as a genuine academic track, not an extracurricular add-on.</h2>
+      </div>
+      <p class="head-meta reveal d1">Sport is one of the four guided pathways — selected the same way academic streams are.</p>
+    </div>
+    <div class="sports-wrap">
+      <div class="sports-copy reveal">
+        <p>Sport is one of the four guided pathways at the school. Students who show strong physical or competitive ability are trained daily alongside their academics, not instead of them.</p>
+        <p>Selection happens the same way as academic streaming — through observation, practice performance and PE faculty recommendation — so no talented student is overlooked simply because they're stronger on the field than in the classroom.</p>
+        <p>The open ground at the centre of campus hosts morning assembly, athletics and inter-house sport, with coaching built into the daily timetable rather than squeezed in at the end of the day.</p>
+        <div class="sports-tags">
+          <span>Daily practice</span>
+          <span>Inter-school meets</span>
+          <span>Faculty scouting</span>
+          <span>Morning &amp; evening slots</span>
+        </div>
+      </div>
+      <div class="sports-list reveal d1">
+        <div class="sports-item"><div class="name">Kabaddi</div><div class="meta">Boys &amp; Girls</div></div>
+        <div class="sports-item"><div class="name">Kho-Kho</div><div class="meta">Boys &amp; Girls</div></div>
+        <div class="sports-item"><div class="name">Athletics &amp; Track</div><div class="meta">All classes</div></div>
+        <div class="sports-item"><div class="name">Cricket</div><div class="meta">Senior wing</div></div>
+        <div class="sports-item"><div class="name">Volleyball</div><div class="meta">Senior wing</div></div>
+        <div class="sports-item"><div class="name">Morning drill</div><div class="meta">Whole school</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Student achievements</div>
+        <h2>Where students from Pindaruch have gone on to make the school proud.</h2>
+      </div>
+      <p class="head-meta reveal d1">Across academics, sport and competitive exams — outcomes of the skill-first approach.</p>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card reveal">
+        <div class="ach-year">RECENT — ACADEMIC</div>
+        <h4>Board results with first-division passes</h4>
+        <p>Students from the Science and Commerce streams have consistently secured first-division marks in the Bihar Board +2 examinations, with several placing among the top scorers of the block.</p>
+        <div class="ach-medal">Academic merit</div>
+      </div>
+      <div class="ach-card reveal d1">
+        <div class="ach-year">RECENT — SPORTS</div>
+        <h4>Inter-school Kabaddi &amp; Kho-Kho wins</h4>
+        <p>The school's Kabaddi and Kho-Kho teams have represented Pindaruch at inter-school and block-level meets, regularly reaching the final stages and bringing back medals for the campus.</p>
+        <div class="ach-medal">Block-level medals</div>
+      </div>
+      <div class="ach-card reveal d2">
+        <div class="ach-year">RECENT — PATHWAY</div>
+        <h4>Students placed in higher studies &amp; jobs</h4>
+        <p>Guided students have gone on to undergraduate colleges in Darbhanga and beyond, with former sports-track students representing district teams and securing admission through sports quotas.</p>
+        <div class="ach-medal">Higher placement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Campus gallery</div>
+        <h2>A look at the school grounds and daily life at Pindaruch.</h2>
+      </div>
+      <p class="head-meta reveal d1">The main building, the assembly ground and the open spaces that shape everyday school life.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal">
+        <img src="images/school-building.jpg" alt="+2 High School Pindaruch main building with red trim and arched windows" loading="lazy">
+        <div class="gallery-caption">
+          <div>
+            <div class="cap-title">Main building &amp; lawn</div>
+            <div class="cap-meta">Pindaruch campus</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item wide reveal d1">
+        <img src="images/assembly-ground.jpg" alt="School assembly ground with students in uniform and tricolor stage" loading="lazy">
+        <div class="gallery-caption">
+          <div>
+            <div class="cap-title">Assembly ground</div>
+            <div class="cap-meta">Morning assembly · students in uniform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Visit / contact</div>
+        <h2>Find the school, or get in touch with the office.</h2>
+      </div>
+      <p class="head-meta reveal d1">Families are welcome to visit during school hours. The campus is at the heart of Pindaruch village, Keoti block, Darbhanga.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <h3>+2 High School Pindaruch</h3>
+        <p>A higher secondary school serving Pindaruch and the surrounding villages of Darbhanga district. For admissions, stream guidance or campus visits, the school office is open on working days during school hours.</p>
+
+        <div class="contact-row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="lbl">Address</div>
+            <div class="val">Pindaruch · Keoti Block<br>Darbhanga · Bihar, India</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg>
+          </div>
+          <div>
+            <div class="lbl">School office</div>
+            <div class="val">Open on working days<br>During school hours</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div>
+            <div class="lbl">Note</div>
+            <div class="val">Phone &amp; email will be added once the school office shares them. For now, please visit the campus directly.</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap reveal d1">
+        <div class="map-tag">Pindaruch · Darbhanga</div>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=85.8%2C26.05%2C86.0%2C26.2&layer=mapnik&marker=26.125%2C85.9"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map showing Pindaruch, Darbhanga, Bihar">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>+2 High School Pindaruch</h3>
+        <p>A higher secondary school in Darbhanga, Bihar, where every student is guided toward the stream they are actually good at — Science, Commerce, Arts or Sports.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About the school</a></li>
+          <li><a href="#pathway">Streams &amp; guidance</a></li>
+          <li><a href="#teachers">Our teachers</a></li>
+          <li><a href="#sports">Sports programme</a></li>
+          <li><a href="#achievements">Student achievements</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Visit</h5>
+        <ul>
+          <li><a href="#contact">Contact the office</a></li>
+          <li><a href="#gallery">Campus gallery</a></li>
+          <li><a href="https://www.openstreetmap.org/?mlat=26.125&mlon=85.9#map=14/26.125/85.9" target="_blank" rel="noopener">View on map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="rights">© +2 High School Pindaruch · Pindaruch · Keoti · Darbhanga · Bihar</div>
+      <div class="made">Built as a school website project</div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="#pathway" class="mc-ghost">Streams</a>
+  <a href="#contact" class="mc-primary">Contact</a>
+</div>
+
+<script>
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){
+    navToggle.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden','true');
+    navToggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  function openMenu(){
+    navToggle.classList.add('open');
+    mobileMenu.classList.add('open');
+    mobileMenu.setAttribute('aria-hidden','false');
+    navToggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  navToggle.addEventListener('click', ()=>{
+    if(mobileMenu.classList.contains('open')) closeMenu();
+    else openMenu();
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Close menu on resize to desktop
+  let resizeTimer;
+  window.addEventListener('resize', ()=>{
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(()=>{
+      if(window.innerWidth > 900 && mobileMenu.classList.contains('open')) closeMenu();
+    }, 120);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+    reveals.forEach(r => io.observe(r));
+  } else {
+    reveals.forEach(r => r.classList.add('in'));
+  }
+
+  // Smooth scroll for nav links (with sticky header offset)
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const id = a.getAttribute('href');
+      if(id.length > 1){
+        const target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+          window.scrollTo({top, behavior:'smooth'});
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
